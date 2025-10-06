@@ -2,34 +2,29 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="BACHI: Boundary-aware symbolic chord recognition with masked iterative decoding on classical and pop music."/>
-  <meta property="og:title" content="BACHI: Boundary-Aware Symbolic Chord Recognition"/>
-  <meta property="og:description" content="BACHI unifies boundary detection with confidence-ordered decoding for state-of-the-art symbolic chord recognition in multi-genre music."/>
-  <meta property="og:url" content="https://bachi-chord-recognition.github.io"/>
-  <meta property="og:image" content="static/images/architecture.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+    <meta name="description"
+          content="BACHI: Boundary-aware symbolic chord recognition with masked iterative decoding on classical and pop music.">
+    <meta name="keywords" content="Symbolic Chord Recognition, POP909-CL, Mask Filling">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BACHI: Boundary-Aware Symbolic Chord Recognition</title>  
 
-
-  <title>BACHI: Boundary-Aware Symbolic Chord Recognition</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700|Castoro"
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
@@ -39,7 +34,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">BACHI: Boundary-Aware Symbolic Chord Recognition through Masked Iterative Decoding</h1>
+            <h1 class="title is-1 publication-title">BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on Pop and Classical Music</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block"><a href="https://andyweasley2004.github.io/" target="_blank">Mingyang Yao</a>,</span>
               <span class="author-block"><a href="https://www.knutchen.com/" target="_blank">Ke Chen</a>,</span>
@@ -50,36 +45,38 @@
               <span class="author-block">University of California San Diego</span>
             </div>
               <div class="publication-links">
-                <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-code-branch"></i></span>
-                  <span>Code (Coming Soon)</span>
-                  </a>
-                </span>
+                
             <span class="link-block">
                 <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>arXiv</span>
               </a>
             </span>
             <span class="link-block">
-                <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <a href="https://github.com/andyweasley2004/BACHI" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-fw fa-github"></i></span>
                 <span>Code</span>
               </a>
             </span>
             <span class="link-block">
                 <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span class="icon"><i class="fas fa-music"></i></span>
                   <span>POP909-CL</span>
                 </a>
             </span>
-            </div>
+            <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="./static/images/huggingface.svg" alt="Hugging Face Icon" class="icon-img">
+                  </span>
+                  <span>Hugging Face</span>
+                </a>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 
 
 <section class="section placeholder-section">
@@ -148,206 +145,260 @@ Automatic chord recognition (ACR) via deep learning models has gradually achieve
           <h2 class="title is-3">Results</h2>
           <div class="results-block">
             <h3 class="title is-4">Ablation on Classical &amp; Pop</h3>
-            <div class="carousel results-carousel" id="ablation-carousel">
+            <p>We perform a comprehensive ablation study on both classical and pop music benchmarks. We report the per-piece macro accuracy (%) across classical and POP909-CL ablations. The following is the detailed ablation study:</p>
+            <ul>
+              <li>BACHI w/o BD &amp; ID: We use the patch embedding and transformer encoder modules only (no <strong>boundary-aware detection</strong> and <strong>iterative decoding</strong>).</li>
+              <li>BACHI w/o ID: We use the patch embedding, transformer encoder and boundary-aware detection modules only (no <strong>iterative decoding</strong>).</li>
+              <li>BACHI + Key Detection: On top of complete BACHI, we add a key detection module and use the key detection result to guide the iterative decoding like boundary</li>
+              <li>BACHI (Full): We use the full BACHI model (patch embedding, transformer encoder, boundary-aware detection, and iterative decoding).</li>
+            </ul>
+            <div class="results-carousel" id="ablation-carousel">
               <div class="item">
-                <table class="table is-fullwidth is-striped">
-                  <thead>
-                    <tr>
-                      <th>Model Variant</th>
-                      <th>Root</th>
-                      <th>Quality</th>
-                      <th>Bass</th>
-                      <th>Full</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>BACHI w/o BD &amp; ID</td>
-                      <td>78.4</td>
-                      <td>79.5</td>
-                      <td>77.6</td>
-                      <td>66.8</td>
-                    </tr>
-                    <tr>
-                      <td>BACHI w/o ID</td>
-                      <td>76.6</td>
-                      <td>78.1</td>
-                      <td>76.1</td>
-                      <td>67.1</td>
-                    </tr>
-                    <tr>
-                      <td>BACHI + Key Detection</td>
-                      <td>77.4</td>
-                      <td>78.8</td>
-                      <td>76.4</td>
-                      <td>67.6</td>
-                    </tr>
-                    <tr>
-                      <td>BACHI (Full)</td>
-                      <td>78.3</td>
-                      <td>79.7</td>
-                      <td>77.5</td>
-                      <td>69.0</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="results-table-wrapper">
+                  <table class="results-table results-table--compact">
+                    <thead>
+                      <tr>
+                        <th colspan="5" class="table-caption", style="text-align: center;">Classical Corpus</th>
+                      </tr>
+                      <tr>
+                        <th><strong>Model Variant</strong></th>
+                        <th><strong>Root</strong></th>
+                        <th><strong>Quality</strong></th>
+                        <th><strong>Bass</strong></th>
+                        <th class="full-col"><strong>Full</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>BACHI w/o BD &amp; ID</strong></td>
+                        <td><strong>78.0</strong></td>
+                        <td>78.9</td>
+                        <td><strong>77.3</strong></td>
+                        <td class="full-col">66.1</td>
+                      </tr>
+                      <tr>
+                        <td><strong>BACHI w/o ID</strong></td>
+                        <td>77.8</td>
+                        <td>78.8</td>
+                        <td>76.8</td>
+                        <td class="full-col">65.6</td>
+                      </tr>
+                      <tr>
+                        <td><strong>BACHI + Key Detection</strong></td>
+                        <td>77.4</td>
+                        <td>78.6</td>
+                        <td>76.4</td>
+                        <td class="full-col">67.6</td>
+                      </tr>
+                      <tr>
+                        <td><strong>BACHI (Full)</strong></td>
+                        <td>77.8</td>
+                        <td><strong>79.0</strong></td>
+                        <td>77.0</td>
+                        <td class="full-col"><strong>68.1</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="item">
+                <div class="results-table-wrapper">
+                  <table class="results-table results-table--compact">
+                    <thead>
+                      <tr>
+                        <th colspan="5" class="table-caption", style="text-align: center;">POP909-CL</th>
+                      </tr>
+                      <tr>
+                        <th><strong>Model Variant</strong></th>
+                        <th><strong>Root</strong></th>
+                        <th><strong>Quality</strong></th>
+                        <th><strong>Bass</strong></th>
+                        <th class="full-col"><strong>Full</strong></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>BACHI w/o BD &amp; ID</strong></td>
+                        <td>90.1</td>
+                        <td>86.8</td>
+                        <td>91.8</td>
+                        <td class="full-col">82.1</td>
+                      </tr>
+                      <tr>
+                        <td><strong>BACHI w/o ID</strong></td>
+                        <td><strong>90.3</strong></td>
+                        <td><strong>87.0</strong></td>
+                        <td><strong>92.1</strong></td>
+                        <td class="full-col">82.3</td>
+                      </tr>
+                      <tr>
+                        <td><strong>BACHI + Key Detection</strong></td>
+                        <td>89.3</td>
+                        <td>86.3</td>
+                        <td>90.7</td>
+                        <td class="full-col">81.4</td>
+                      </tr>
+                      <tr>
+                        <td><strong>BACHI (Full)</strong></td>
+                        <td>89.5</td>
+                        <td>86.8</td>
+                        <td>91.3</td>
+                        <td class="full-col"><strong>82.4</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
           </div>
         </div>
-            <p class="caption">Per-piece macro accuracy (%) on the classical corpus. POP909-CL exhibits matching trends (see paper).</p>
       </div>
-          <div class="results-block">
-            <h3 class="title is-4">Benchmark Comparison</h3>
-            <div class="carousel results-carousel" id="comparison-carousel">
-              <div class="item">
-                <table class="table is-fullwidth is-striped">
-                  <thead>
-                    <tr>
-                      <th rowspan="2">Model</th>
-                      <th colspan="4" class="has-text-centered">Classical Corpus</th>
-                      <th colspan="4" class="has-text-centered">POP909-CL</th>
-                    </tr>
-                    <tr>
-                      <th>Root</th>
-                      <th>Quality</th>
-                      <th>Bass</th>
-                      <th>Full</th>
-                      <th>Root</th>
-                      <th>Quality</th>
-                      <th>Bass</th>
-                      <th>Full</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Rule-based</td>
-                      <td>54.6</td>
-                      <td>45.8</td>
-                      <td>50.5</td>
-                      <td>28.4</td>
-                      <td>85.9</td>
-                      <td>69.7</td>
-                      <td>85.8</td>
-                      <td>65.0</td>
-                    </tr>
-                    <tr>
-                      <td>AugmentedNet</td>
-                      <td>73.9</td>
-                      <td>74.2</td>
-                      <td>72.3</td>
-                      <td>57.2</td>
-                      <td>88.6</td>
-                      <td>84.5</td>
-                      <td>90.5</td>
-                      <td>78.7</td>
-                    </tr>
-                    <tr>
-                      <td>ChordGNN</td>
-                      <td>73.0</td>
-                      <td>73.7</td>
-                      <td>71.0</td>
-                      <td>58.5</td>
-                      <td>80.7</td>
-                      <td>82.0</td>
-                      <td>82.7</td>
-                      <td>71.6</td>
-                    </tr>
-                    <tr>
-                      <td>Harmony Transformer v2</td>
-                      <td>75.9</td>
-                      <td>75.7</td>
-                      <td>74.9</td>
-                      <td>60.3</td>
-                      <td>90.6</td>
-                      <td>86.9</td>
-                      <td>92.2</td>
-                      <td>82.2</td>
-                    </tr>
-                    <tr class="highlight-row">
-                      <td>BACHI (ours)</td>
-                      <td>78.3</td>
-                      <td>79.7</td>
-                      <td>77.5</td>
-                      <td>69.0</td>
-                      <td>89.6</td>
-                      <td>87.1</td>
-                      <td>91.5</td>
-                      <td>82.8</td>
-                    </tr>
-                  </tbody>
-                </table>
+          <p class="caption">While boundary detection alone makes unstable effects on the model, the iterative decoding has a larger influence on the performance, indicating that iterative decoding across chord elements contributes significantly to overall accuracy. Interestingly, adding key detection as an additional conditioning signal slightly decreases full-chord accuracy compared to the full BACHI, likely due to errors in key prediction propagating to chord recognition.</p>
+      </div>
+
+      <div class="results-block">
+        <h3 class="title is-4">Benchmark Comparison</h3>
+        <div class="results-table-wrapper">
+          <table class="results-table results-table--compact">
+            <thead>
+              <tr>
+                <th rowspan="2">#</th>
+                <th rowspan="2">Model</th>
+                <th colspan="4" class="has-text-centered"><strong>Classical Corpus</strong></th>
+                <th colspan="4" class="has-text-centered"><strong>POP909-CL</strong></th>
+              </tr>
+              <tr>
+                <th><strong>Root</strong></th>
+                <th><strong>Quality</strong></th>
+                <th><strong>Bass</strong></th>
+                <th class="full-col"><strong>Full</strong></th>
+                <th><strong>Root</strong></th>
+                <th><strong>Quality</strong></th>
+                <th><strong>Bass</strong></th>
+                <th class="full-col"><strong>Full</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="https://github.com/Dsqvival/hierarchical-structure-analysis/tree/main/preprocessing" target="_blank"><strong>Rule-based</strong></a></td>
+                <td>54.6</td>
+                <td>45.8</td>
+                <td>50.5</td>
+                <td class="full-col">28.4</td>
+                <td>85.9</td>
+                <td>69.7</td>
+                <td>85.8</td>
+                <td class="full-col">65.0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="https://archives.ismir.net/ismir2021/paper/000050.pdf" target="_blank"><strong>AugmentedNet</strong></a></td>
+                <td>73.9</td>
+                <td>74.2</td>
+                <td>72.3</td>
+                <td class="full-col">57.2</td>
+                <td>88.6</td>
+                <td>84.5</td>
+                <td>90.5</td>
+                <td class="full-col">78.7</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><a href="https://arxiv.org/abs/2307.03544" target="_blank"><strong>ChordGNN</strong></a></td>
+                <td>73.0</td>
+                <td>73.7</td>
+                <td>71.0</td>
+                <td class="full-col">58.5</td>
+                <td>80.7</td>
+                <td>82.0</td>
+                <td>82.7</td>
+                <td class="full-col">71.6</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><a href="https://transactions.ismir.net/articles/10.5334/tismir.65" target="_blank"><strong>Harmony Transformer v2</strong></a></td>
+                <td>75.9</td>
+                <td>75.7</td>
+                <td>74.9</td>
+                <td class="full-col">60.3</td>
+                <td>90.6</td>
+                <td>86.9</td>
+                <td>92.2</td>
+                <td class="full-col">82.2</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>5</td>
+                <td><strong>BACHI (ours)</strong></td>
+                <td><strong>77.8</strong></td>
+                <td><strong>79.0</strong></td>
+                <td><strong>77.0</strong></td>
+                <td class="full-col"><strong>68.1</strong></td>
+                <td>89.6</td>
+                <td>86.8</td>
+                <td>91.3</td>
+                <td class="full-col"><strong>82.4</strong></td>
+              </tr>
+            </tbody>
+          </table>
     </div>
-  </div>
-            <p class="caption">BACHI attains state-of-the-art performance across both classical and pop symbolic chord benchmarks.</p>
+            <p class="caption">For classical music, BACHI achieves the highest scores across all metrics, with a notable improvement in full chord accuracy (68.1%) over prior baselines. For pop music, BACHI achieves state-of-the-art performance, with a full chord accuracy of 82.4%. Most deep learning methods are all performing well on pop music, and though some components are not ranking at first, the full chord accuracy is still the best. Overall, these results demonstrate both the strong performance of BACHI on classical and pop music, where BACHI is particuarly good at more complex classical music.</p>
           </div>
           <div class="results-block">
             <h3 class="title is-4">Confidence-Ordered Decoding</h3>
-            <div class="carousel results-carousel" id="confidence-carousel">
-              <div class="item">
-                <table class="table is-fullwidth is-hoverable">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Classical</th>
-                      <th>POP909-CL</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Most frequent first-decoded field</strong></td>
-                      <td>Quality (41.8%)</td>
-                      <td>Bass (65.8%)</td>
-                    </tr>
-                    <tr>
-                      <td>Top decoding sequence</td>
-                      <td>Quality → Root → Bass (34.0%)</td>
-                      <td>Bass → Root → Quality (56.7%)</td>
-                    </tr>
-                    <tr>
-                      <td>Interpretation</td>
-                      <td>Classical harmony emphasizes functional quality cues.</td>
-                      <td>Pop arrangements highlight bass-led cues for chord identity.</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="results-table-wrapper">
+              <table class="results-table results-table--compact">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th><strong>Classical</strong></th>
+                    <th><strong>POP909-CL</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Most frequent first-decoded field</strong></td>
+                    <td>Quality (40.8%)</td>
+                    <td>Bass (66.9%)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Top decoding sequence</strong></td>
+                    <td>Quality → Root → Bass (32.2%)</td>
+                    <td>Bass → Root → Quality (56.4%)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Interpretation</strong></td>
+                    <td>Classical harmony emphasizes voice-leading and functional quality cues.</td>
+                    <td>Pop arrangements highlight bass-led cues for chord identity.</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-      </div>
-            <p class="caption">Adaptive decoding order mirrors genre-specific ear-training strategies captured by BACHI.</p>
+            <p class="caption">These genre-variant orders indicate that the model internalizes musician-like heuristics, supporting our hypothesis that human-mimicking decision paths benefit symbolic ACR and improve upon fixed-order decoding.</p>
     </div>
+</section>
 
 
-
-<section class="section" id="takeaways">
+<section class="section hero is-small" id="takeaways">
   <div class="container is-max-desktop content">
-    <h2 class="title">Takeaways</h2>
+    <h2 class="title">Main Contributions</h2>
     <ul>
-      <li>BACHI combines boundary-aware encoding with confidence-ordered decoding to mirror human ear-training for symbolic chord recognition.</li>
-      <li>Introduces POP909-CL with human-corrected chords, beats, keys, and time signatures, enabling reliable evaluation on pop music.</li>
-      <li>Delivers state-of-the-art accuracy across classical and POP909-CL benchmarks, validated by ablation studies and genre-specific decoding analysis.</li>
+      <li>We proposed POP909-CL, an enhanced version of POP909 with human-corrected labels, as a reliable resource for MIR research.</li>
+      <li>We propose BACHI, a boundary-aware symbolic chord recognition model that incorporates cues and decision processes inspired by human ear-training to improve recognition accuracy.</li>
+      <li>Objective evaluations demonstrate that BACHI achieves state-of-the-art performance on both classical and pop music benchmarks, with ablation studies validating the effectiveness of each module.</li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="bibtex">
+<section class="section hero is-small" id="BibTeX">
   <div class="container is-max-desktop content">
-    <div class="bibtex-header">
     <h2 class="title">BibTeX</h2>
-      <button class="copy-bibtex-btn" onclick="copyBibTeX()">
-        <span class="icon"><i class="fas fa-copy"></i></span>
-        <span class="copy-text">Copy</span>
-      </button>
-    </div>
-    <pre><code id="bibtex-code">% BibTeX entry coming soon.</code></pre>
+    <pre><code>@article{yao2025bachi,
+  author    = {Mingyang Yao and Ke Chen and Shlomo Dubnov and Taylor Berg-Kirkpatrick},
+  title     = {BACHI: Boundary-Aware Symbolic Chord Recognition Through Masked Iterative Decoding on Pop and Classical Music},
+  journal   = {arXiv},
+  year      = {2025},
+}</code></pre>
   </div>
 </section>
 
-<!--Acknowledgements -->
-<section class="section" id="Acknowledgements">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgements</h2>
-  We thank Ely Sarig for creating the video, Jay Tenenbaum for the video narration, Amir Hertz for the implementation of our eval baseline, Daniel Cohen-Or, Assaf Zomet, Eyal Segalis, Matan Kalman and Emily Denton for their valuable inputs that helped improve this work.
-  </div>
-</section>
-<!--End Acknowledgements -->
   
 <footer class="footer">
   <div class="container">
@@ -355,8 +406,9 @@ Automatic chord recognition (ACR) via deep learning models has gradually achieve
       <div class="column is-8">
         <div class="content">
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-            You are free to reuse the layout of this website; please link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This website is built with <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> and modified from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>.
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
         </div>
@@ -364,6 +416,7 @@ Automatic chord recognition (ACR) via deep learning models has gradually achieve
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>
