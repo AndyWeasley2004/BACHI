@@ -65,7 +65,7 @@
                 </a>
             </span>
             <span class="link-block">
-                <a href="https://huggingface.co/datasets/Itsuki-music/BACHI_Chord_Recognition/tree/main/unique_data_collection" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://huggingface.co/datasets/Itsuki-music/BACHI_Chord_Recognition" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <img src="./static/images/huggingface.svg" alt="Hugging Face Icon" class="icon-img">
                   </span>
@@ -79,12 +79,19 @@
   </section>
 
 
-<section class="section placeholder-section">
-    <div class="container is-max-desktop">
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-centered">
-        <div class="image-placeholder">
-          <span>Project Teaser Placeholder</span>
+      <div class="column is-full">
+        <div class="content has-text-centered">
+          <div class="method-figure">
+            <img src="static/images/architecture.png" alt="BACHI architecture overview" class="center-image"/>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1.5rem;">
+            <p>
+              <strong>BACHI</strong> introduces a boundary-aware approach to symbolic chord recognition that mirrors human ear-training practices. The model decomposes chord recognition into explicit steps: detecting chord boundaries, then iteratively predicting root, quality, and bass in confidence order.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -118,9 +125,9 @@ Automatic chord recognition (ACR) via deep learning models has gradually achieve
       <div class="column is-full">
         <div class="content">
           <h2 class="title is-3">Method</h2>
-          <div class="method-figure">
+          <!-- <div class="method-figure">
             <img src="static/images/architecture.png" alt="BACHI architecture" class="center-image"/>
-          </div>
+          </div> -->
           <div class="level-set has-text-justified">
             <p>BACHI performs symbolic chord recognition in two boundary-aware stages that mirror human ear-training.</p>
             <ul>
@@ -143,6 +150,13 @@ Automatic chord recognition (ACR) via deep learning models has gradually achieve
       <div class="column is-full">
         <div class="content">
           <h2 class="title is-3">Results</h2>
+          <div class="results-block">
+            <h3 class="title is-4">Qualitative Examples</h3>
+            <div class="method-figure" style="margin-bottom: 2rem;">
+              <img src="static/images/demo_image.png" alt="BACHI predictions on classical and pop music examples" class="center-image"/>
+            </div>
+            <p class="caption">Example predictions from BACHI on classical music (top) and POP909-CL (bottom), comparing ground truth annotations with model predictions.</p>
+          </div>
           <div class="results-block">
             <h3 class="title is-4">Ablation on Classical &amp; Pop</h3>
             <p>We perform a comprehensive ablation study on both classical and pop music benchmarks. We report the per-piece macro accuracy (%) across classical and POP909-CL ablations. The following is the detailed ablation study:</p>
