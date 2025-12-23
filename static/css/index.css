@@ -252,3 +252,24 @@ display: inline-block;
 .results-table--compact tbody tr:nth-child(even) {
   background: rgba(148, 163, 184, 0.18);
 }
+
+/* MIREX table styles for wider tables with more columns */
+.mirex-table {
+  font-size: 0.85rem;
+}
+
+.mirex-table th,
+.mirex-table td {
+  padding: 0.6rem 0.7rem;
+  white-space: nowrap;
+}
+
+.mirex-table th:first-child,
+.mirex-table td:first-child {
+  min-width: 120px;
+}
+
+.results-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
